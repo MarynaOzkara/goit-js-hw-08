@@ -15,7 +15,7 @@ message.value = dataForm.message || '';
 
 function onInput() {
   dataForm = { email: email.value, message: message.value };
-  // localStorage.setItem(DATA_KEY, JSON.stringify(dataForm));
+  localStorage.setItem(DATA_KEY, JSON.stringify(dataForm));
 }
 
 function onSubmit(event) {
