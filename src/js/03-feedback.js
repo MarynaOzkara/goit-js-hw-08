@@ -18,8 +18,6 @@ function reloadPage() {
   }
   }
  
-
-
 function onInput() {
   dataForm = { email: email.value, message: message.value };
   localStorage.setItem(DATA_KEY, JSON.stringify(dataForm));
@@ -33,10 +31,10 @@ function onSubmit(event) {
   } else {
     console.log(dataForm);
   }
-
+  
+  localStorage.removeItem(DATA_KEY);
   form.reset();
   dataForm = {};
-
 }
 
 
